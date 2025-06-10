@@ -1,12 +1,14 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import LanguagePicker from './LanguagePicker.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils'
+import LanguagePicker from './LanguagePicker.astro'
+import ThemeToggle from './ThemeToggle'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <header>
   <h1>{t('title')}</h1>
   <LanguagePicker />
+  <ThemeToggle client:only="preact" />
 </header>

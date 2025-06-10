@@ -8,11 +8,6 @@ export default [
   ...eslintPluginAstro.configs['jsx-a11y-recommended'],
   eslintPluginPrettierRecommended,
   {
-    rules: {
-      'prettier/prettier': ['warn'],
-    },
-  },
-  {
     files: ['**/*.astro'],
     languageOptions: {
       parser: astroEslintParser,
@@ -21,8 +16,36 @@ export default [
         extraFileExtensions: ['.astro'],
       },
     },
+    processor: 'astro/client-side-ts',
     rules: {
       'astro/no-set-html-directive': 'error',
+      'prettier/prettier': 'warn',
+    },
+  },
+  {
+    files: ['**/*.tsx', '**/*.ts'],
+    languageOptions: {
+      parser: typescriptEslintParser,
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'prettier/prettier': 'warn',
+    },
+  },
+  {
+    files: ['**/*.astro/*.ts', '*.astro/*.ts'],
+    languageOptions: {
+      parser: typescriptEslintParser,
+      parserOptions: {
+        sourceType: 'module',
+        project: null,
+      },
+    },
+    rules: {
+      'prettier/prettier': 'off',
     },
   },
   {

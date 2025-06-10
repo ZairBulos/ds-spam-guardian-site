@@ -4,14 +4,16 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@astrojs/preact": "^4.1.0",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.9.0",
+    "preact": "^10.26.8",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
