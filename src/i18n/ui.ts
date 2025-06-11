@@ -1,15 +1,27 @@
 export const languages = {
   es: 'Español',
   en: 'English',
-};
+}
 
-export const defaultLang = 'es';
+export const defaultLang = 'es'
 
 export const ui = {
   es: {
-    'title': 'Hola Mundo',
+    selectLanguage: 'Selecciona tu idioma',
+
+    light: 'Claro',
+    dark: 'Oscuro',
+    system: 'Sistema',
+
+    title: 'Hola Mundo',
   },
   en: {
-    'title': 'Hello World',
+    selectLanguage: 'Select a language',
+
+    light: 'Light',
+    dark: 'Dark',
+    system: 'System',
+
+    title: 'Hello World',
   },
-} as const;
+} as const

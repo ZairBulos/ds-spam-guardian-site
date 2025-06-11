@@ -3,13 +3,15 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --color-dark-button: #121214;
-  --color-dark-button-border: #2A2C32;
-  --color-dark-button-hover: #32353E;
-  --color-dark-svg-color: #E6E6E6;
+  --color-dark-primary: #121214;
+  --color-dark-secondary: #1A1A1E;
+  --color-dark-text: #E6E6E6;
+  --color-dark-border: #2A2C32;
+  --color-dark-secondary-hover: #32353E;
 
-  --color-light-button: #FFF;
-  --color-light-button-border: #D4D9E2;
-  --color-light-button-hover: #EAEBF0;
-  --color-light-svg-color: #2E3038;
+  --color-light-primary: #F6F8FC;
+  --color-light-secondary: #EDEEF3;
+  --color-light-text: #2E3038;
+  --color-light-border: #D4D9E2;
+  --color-light-secondary-hover: #EAEBF0;
 }
